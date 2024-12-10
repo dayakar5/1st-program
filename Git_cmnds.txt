@@ -29,3 +29,15 @@ single line.
 Git merge branchname: copy from branch to pointer 
 
 which is in head state now.
+
+On GitHub, and we see that the repository has a new commit. And we can send 
+
+a Pull Request to the original repository
+
+GITHUB BRANCH:
+
+On GitHub, access your repository and click the "master" branch button.
+
+There you can create a new Branch. Type in a descriptive name, and click 
+
+Create branch:

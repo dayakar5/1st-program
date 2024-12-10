@@ -1,0 +1,139 @@
+Executing process 
+
+Create a folder with your roll no as ex12 in any 
+
+drive 
+
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 ~
+
+$ cd F:/ex12
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12
+
+$ git init
+
+EXPECTED OUTPUT:
+
+Initialized empty Git repository in F:/ex12/.git/
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12
+
+(master)
+
+$ git add file1.txt
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12
+
+(master)
+
+$ git commit -m "master 1 version"
+
+EXPECTED OUTPUT:
+
+[master (root-commit) 85310a0] master 1 version
+
+1 file changed, 1 insertion(+)
+
+create mode 100644 file1.txt
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12
+
+(master)
+
+$ git branch br1
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12
+
+(master)
+
+$ git branch
+
+EXPECTED OUTPUT:
+
+ br1
+
+* master
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12
+
+(master)
+
+$ git checkout br1
+
+EXPECTED OUTPUT:
+
+Switched to branch 'br1'
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12 (br1)
+
+$ git add file1.txt
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12 (br1)
+
+$ git commit -m "br1 1 version"
+
+EXPECTED OUTPUT:
+
+[br1 65cf90c] br1 1 version
+
+1 file changed, 1 insertion(+), 1 deletion(-)
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12 (br1)
+
+$ git log –oneline
+
+EXPECTED OUTPUT:
+
+65cf90c (HEAD -> br1) br1 1 version
+
+85310a0 (master) master 1 version
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12 (br1)
+
+$ git add file1.txt
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12 (br1)
+
+EXPECTED OUTPUT:
+
+$ git commit -m "br1 2 version"
+
+[br1 4cb7a65] br1 2 version
+
+1 file changed, 1 insertion(+), 1 deletion(-)
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12 (br1)
+
+$ git log –oneline
+
+EXPECTED OUTPUT:
+
+4cb7a65 (HEAD -> br1) br1 2 version
+
+65cf90c br1 1 version
+
+85310a0 (master) master 1 version
+
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12 (br1)
+
+$ git checkout master
+
+EXPECTED OUTPUT:
+
+Switched to branch 'master'
+Narendarkumboji@DESKTOP-5HUH47P MINGW64 /f/ex12
+
+(master)
+
+$ git merge br1
+
+EXPECTED OUTPUT:
+
+Updating 85310a0..4cb7a65
+
+Fast-forward
+
+file1.txt | 2 +-
+
+1 file changed, 1 insertion(+), 1 deletion(-)

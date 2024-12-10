@@ -1,0 +1,31 @@
+Git init : To create git repository
+
+Git add file: adding file to staging
+
+Git commit –m “msg”: moving file from staging to .git 
+
+repository. We can keep track of changes by 
+
+commiting.
+
+Git branch branchname: creating ing new branch as 
+
+copy of master.
+
+Git branch : shows all branches and shows where is 
+
+pointer now.
+
+Git checkout branchname: moving pointer from present 
+
+branch to specified branch.
+
+Git log: displays all commits with info.
+
+Git log --oneline: displays all commits with each in 
+
+single line.
+
+Git merge branchname: copy from branch to pointer 
+
+which is in head state now.

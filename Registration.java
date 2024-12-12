@@ -25,8 +25,8 @@ public class Registration extends HttpServlet {
   Connection con=null;
   Statement s=null;
   try {
-   Class.forName("com.mysql.cj.jdbc.Driver");
-   con=DriverManager.getConnection("jdbc:mysql://localhost:3303/realdb","root","root");
+   Class.forName("com.mysql.jdbc.Driver");
+   con=DriverManager.getConnection("jdbc:mysql://localhost:3303/realdb","root","1");
    s=con.createStatement();
    int result=s.executeUpdate("insert into event values('"+name+"','"+phone+"','"+email+"','"+attendeesno+"')");
    out.println("<html><body bgcolor='pink'><center><h1>");

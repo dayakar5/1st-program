@@ -5,9 +5,9 @@ int main() {
     int a[20],b[20],c[20];
     int i , n , k =0,I=0,j=0;
     
-    printf("emtet n value\n");
+    printf("enter n value\n");
     scanf("%d",&n);
-     printf("emtet valuess\n");
+    printf("enter valuess\n");
     for(i=0;i<n;i++){
         scanf("%d",&a[i]);
     }

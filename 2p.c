@@ -33,11 +33,11 @@ int main() {
     for(i=0;i<j;i++){
         printf("%c",b[i]);
     }
-    printf("\nafter trabs\n");
+    printf("\nafter trans\n");
     b[j] = '\0';
     j++;
     for(i=0;i<j;i++){
-        if(b[i] == flag || b[i] == esc){
+        if(b[i] == esc){
             i++;
             c[I] = b[i];
         }else{

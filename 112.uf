@@ -1,0 +1,60 @@
+8A)
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+         backgroundColor : Colors.green,
+      appBar: AppBar(
+        backgroundColor : Colors.blueGrey,
+        title: Text("Custom Widget Example"),
+      ),
+        
+      body: Center(
+        child: IconTextButton(
+            icon: Icons.thumb_up,
+            text: 'Like', 
+            onPressed: () {
+              print('Button Pressed! hello iuk');
+            }),
+      ),
+    ),
+    );
+  }
+}
+
+
+class IconTextButton extends StatelessWidget {
+
+  final IconData icon; 
+  final String text; 
+  final VoidCallback onPressed; 
+  
+  IconTextButton({
+    required this.icon,
+    required this.text,
+    required this.onPressed,
+  });
+
+  
+  Widget build(BuildContext context) {
+    return ElevatedButton.icon(
+      onPressed: onPressed,
+      icon: Icon(icon),
+      label: Text(text),
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.pink,
+        foregroundColor: Colors.black,
+      ),
+    );
+  }
+}

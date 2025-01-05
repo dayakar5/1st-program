@@ -1,0 +1,67 @@
+8B)
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+ const MyApp({super.key});
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        
+        appBar: AppBar(
+          title: Text('Simple Form Example'),
+        ),
+        
+        body: Padding(
+          padding: const EdgeInsets.all(16.0), //important
+          child: SimpleForm(),
+        ),
+        
+      ),
+    );
+  }
+}
+
+class SimpleForm extends StatefulWidget {
+ 
+  SimpleFormState createState() => SimpleFormState();
+  
+}
+
+
+class SimpleFormState extends State<SimpleForm> {
+  
+  final nameController = TextEditingController();
+  final ageController = TextEditingController();
+
+
+  Widget build(BuildContext context) {
+    
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        TextField(
+          controller: nameController,
+          decoration: InputDecoration(labelText: 'Name'),
+        ),
+        TextField(
+          controller: ageController,
+          decoration: InputDecoration(labelText: 'Age'),
+        ),
+        SizedBox(height: 20),
+        ElevatedButton(
+          onPressed: () {
+            final name = nameController.text;
+            final age = ageController.text;
+            print('Name: $name, Age: $age');
+          },
+          child: Text('Submit'),
+        ),
+      ],
+      
+    );
+  }
+}
